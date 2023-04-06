@@ -262,7 +262,7 @@ const Home: NextPage = () => {
         <div className={styles.exchange}>
           <Link href="" >
             <Image
-              src="/boggedFinance.png"
+              src="/BoggedFinance.png"
               width={200}
               height={40}
               alt="Find"
