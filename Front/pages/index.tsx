@@ -329,7 +329,7 @@ const Home: NextPage = () => {
             <div className={styles.textdois} >
               <h3 className={styles.h3}>3% bulback Token</h3>
               <p className={styles.blueText}>
-                A percentage of fees are added on liquidity. Our token has a buyback function. Every time it is traded, this repurchase occurs and a percentage is burned by decreasing the token's circulating supply. This function makes the Puppets Coin Token extremely Hyperdeflationary.</p>
+                {`A percentage of fees are added on liquidity. Our token has a buyback function. Every time it is traded, this repurchase occurs and a percentage is burned by decreasing the token's circulating supply. This function makes the Puppets Coin Token extremely Hyperdeflationary.`}</p>
             </div>
             <div className={styles.textdois}>
               <h3 className={styles.h3}>3% Stake Pool</h3>
@@ -410,12 +410,12 @@ const Home: NextPage = () => {
             <div>
               <div>
 
-                <a className="" href="/">
+                <Link className="" href="/">
                   <Image src="/logo.png"
                     width={200}
                     height={200}
                     alt="Logo" />
-                </a>
+                </Link>
 
                 <div className={styles.listInline}>
 
