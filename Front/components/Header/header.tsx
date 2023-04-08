@@ -18,11 +18,11 @@ export default function Header() {
         "token"
     );
     const { data: tokenBalance } = useTokenBalance(tokenContract, address);
-   
-    
+
+
     const [ethPrice, setEthPrice] = useState(" ");
     const [showText, setShowText] = useState(false);
-    
+
     const handleMouseEnter = () => {
         setShowText(true);
     };
@@ -32,23 +32,23 @@ export default function Header() {
     };
     useEffect(() => {
         const getEthPrice = async () => {
-            const response = await axios.get(`http://localhost:5001/getethprice`, {});
+            const response = await axios.get(`https://app.puppetscoin.com/getethprice`, {});
             setEthPrice(response.data.usdPrice);
         };
-    
+
         // Executa a função a primeira vez
         getEthPrice();
-    
+
         // Executa a função a cada 10 minutos
         const interval = setInterval(() => {
             getEthPrice();
         }, 10 * 60 * 1000);
-    
+
         // Limpa o intervalo quando o componente for desmontado
         return () => clearInterval(interval);
     }, []);
-    
-       
+
+
     return (
         <div className={styles.navLeft}>
             <section className={styles.navMiddle}>
@@ -58,9 +58,9 @@ export default function Header() {
                     height={25} />
 
                 <div
-                 className={styles.objeto}
-                 onMouseEnter={handleMouseEnter}
-                 onMouseLeave={handleMouseLeave}
+                    className={styles.objeto}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
                 >
                     <section className={styles.link}>
                         ${" "}
@@ -79,7 +79,7 @@ export default function Header() {
                     <section>
                         Balance: ${" "}
                         <span className={styles.blueText}>{(new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(Number(tokenBalance?.displayValue) * Number(ethPrice) * 1000000000))}</span>
-                        
+
                     </section>
                 </section>
             ) : (
