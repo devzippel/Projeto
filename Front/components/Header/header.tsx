@@ -78,7 +78,7 @@ export default function Header() {
                 <section className={styles.navMiddle} >
                     <section>
                         Balance: ${" "}
-                        <span className={styles.blueText}>{(new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(Number(tokenBalance?.displayValue) * Number(ethPrice) * 1000000000))}</span>
+                        <span className={styles.blueText}>{(new Intl.NumberFormat('en-US', { maximumFractionDigits: 2 }).format(Number(tokenBalance?.displayValue) * Number(ethPrice) * 1000))}</span>
 
                     </section>
                 </section>
