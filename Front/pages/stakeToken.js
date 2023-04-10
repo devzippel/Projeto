@@ -63,6 +63,7 @@ export default function Home() {
   };
 
   return (
+    <div className={styles.resp}>
     <div className={styles.container}>
       <div className={styles.content}>
         <div className={styles.hero}>
@@ -181,6 +182,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+    </div>
     </div>
   );
 }
