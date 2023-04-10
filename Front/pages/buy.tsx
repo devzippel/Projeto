@@ -17,7 +17,7 @@ export default function Buy() {
         data={data}
         isLoading={isLoading}
         emptyText={
-          "Looks like there are no NFTs in this collection. 
+          "Looks like there are no NFTs in this collection"
         }
       />
     </Container>
